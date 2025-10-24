@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407ed8a6fb97f354fbe9a0e2afa2c158, type: 3}
+  m_Name: Fireburst
+  m_EditorClassIdentifier: 
+  spellName: Fireburst
+  mana: 75
+  damageMod: 0.8
+  speed: 0
+  spellType: 0
+  spawnPoint: 1
+  spellReticle: {fileID: 5523769866277747746, guid: 45aa12beda996dc47875553a3a79f1f8, type: 3}
+  spellInstance: {fileID: 8922702557949559417, guid: 06b75f650eb364d4f964c24cabbad6a2, type: 3}
+  chargingTime: 1
