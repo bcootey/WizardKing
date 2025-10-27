@@ -5,14 +5,14 @@ using UnityEngine;
 public class CameraLean : MonoBehaviour
 {
     public GameObject playerView;
-    public float leanAngle = 5f;
+    public float leanAngle = 1f;
 
     float curAngle;
     float targetAngle;
     float angle;
 
-    float maxRot = -5.0f;
-    float rate = 2.0f;
+    float maxRot = -1.0f;
+    float rate = 1.5f;
 
     void Update()
     {

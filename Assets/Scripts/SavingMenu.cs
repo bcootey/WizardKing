@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using TMPro;
 public class SavingMenu : MonoBehaviour
 {
     [Header("Menus")]
@@ -7,6 +7,8 @@ public class SavingMenu : MonoBehaviour
     public GameObject upgradeMenu;
     public GameObject travelMenu;
     private GameObject currentMenu;
+    
+    public TextMeshProUGUI locationText;
     
     void Start()
     {
@@ -41,8 +43,9 @@ public class SavingMenu : MonoBehaviour
         savingMenu.SetActive(false);
         Pause.instance.ResumeGame();
     }
-    public void EnterSavingMenu()
+    public void EnterSavingMenu(string locationName) //argument that the save point passes that gives location name to menu
     {
+        locationText.text = locationName;
         savingMenu.SetActive(true);
         Pause.instance.PauseGame();
     }
