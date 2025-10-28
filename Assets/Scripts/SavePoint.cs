@@ -4,11 +4,18 @@ public class SavePoint : MonoBehaviour, IInteractable
 {
     [Header("Save point settings")]
     public string locationName;
+    [HideInInspector]
+    public string sceneName;
     public bool isUnlocked = false;
+    public Transform teleportTransform;
     
     private SavingMenu savingMenu;
     private PlayerInteractor playerInteractor;
 
+    void Awake()
+    {
+        sceneName = this.gameObject.scene.name;
+    }
     void Start()
     {
         savingMenu = GameObject.Find("SavingMenu").GetComponent<SavingMenu>();
