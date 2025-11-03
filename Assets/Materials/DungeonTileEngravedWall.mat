@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: DungeonTileEngravedWall
   m_Shader: {fileID: 4800000, guid: 94cb0d6305cd4a743b1d2ec684e277de, type: 3}
-  m_Parent: {fileID: 2100000, guid: c7e4edd4b0fb4204fb316a7432ab2443, type: 2}
+  m_Parent: {fileID: 2100000, guid: d83a9d7c5c035204691e26603a9e0466, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - DIFF_VERTEX
