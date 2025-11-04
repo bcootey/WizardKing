@@ -4914,6 +4914,10 @@ MonoBehaviour:
   forwardSpeed: 30
   returnSpeed: 40
   travelTime: 0.45
+  rayDistance: 0.1
+  floorLayer:
+    serializedVersion: 2
+    m_Bits: 1024
   player: {fileID: 0}
 --- !u!114 &4493774075068644031
 MonoBehaviour:

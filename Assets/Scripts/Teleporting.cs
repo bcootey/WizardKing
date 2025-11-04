@@ -14,9 +14,9 @@ public class Teleporting : MonoBehaviour
         savingMenu.ClosePopUpMenu();
         savingMenu.LeaveSaveMenu();
         playerTransform = PlayerStats.instance.transform;
-
-        // Optional: fade out here
-
+        
+        ScreenTransition.instance.StartFade(.75f, 1.5f);
+        yield return new WaitForSeconds(1f);
         // If target scene is different, load it
         if (SceneManager.GetActiveScene().name != data.sceneName)
         {
@@ -24,8 +24,6 @@ public class Teleporting : MonoBehaviour
             while (!asyncLoad.isDone)
                 yield return null;
         }
-        ScreenTransition.instance.StartFade(1f, 0.2f);
-        yield return new WaitForSeconds(1f);
         playerTransform.position = data.position;
 
         Debug.Log($"Teleported player to {data.id} in scene {data.sceneName}");
