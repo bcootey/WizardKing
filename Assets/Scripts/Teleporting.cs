@@ -24,9 +24,26 @@ public class Teleporting : MonoBehaviour
             while (!asyncLoad.isDone)
                 yield return null;
         }
+        CameraFix();
         playerTransform.position = data.position;
 
         Debug.Log($"Teleported player to {data.id} in scene {data.sceneName}");
+    }
+
+    private void CameraFix()
+    {
+        var cam = Camera.main;
+        if (cam != null)
+        {
+            var psx = cam.GetComponent<PSXEffects>(); // ← your script name
+            if (psx != null)
+            {
+                psx.enabled = false;
+                psx.enabled = true;
+            }
+
+           
+        }
     }
 }
 

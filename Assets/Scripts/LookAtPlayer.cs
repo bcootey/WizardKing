@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class LookAtPlayer : MonoBehaviour
 {
-    public Transform player; // Assign the player transform in the Inspector
+    public Transform player;
+
+    void Start()
+    {
+        player = PlayerStats.instance.playerLocation;
+    }
 
     void Update()
     {

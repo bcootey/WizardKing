@@ -28,6 +28,7 @@ public class EvilWizardStateManager : MonoBehaviour
         wizardNav.speed = defaultSpeed;
         wizardNav.acceleration = defaultAcceleration;
         wizardNav.updateRotation = false;
+        playerStats = PlayerStats.instance;
         currentState = new EvilWizardIdleState(this);
         currentState.EnterState();
     }
