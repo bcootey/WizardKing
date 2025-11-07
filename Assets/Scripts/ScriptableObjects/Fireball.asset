@@ -21,3 +21,5 @@ MonoBehaviour:
   spellReticle: {fileID: 0}
   spellInstance: {fileID: 4137341901546142164, guid: fa4db0d454c4f7649ac10e1271783bce, type: 3}
   chargingTime: 0
+  icon: {fileID: -364536439, guid: 6aedfc127d504084ea7fedb3e82b0b3e, type: 3}
+  description: Throws a powerful ball of fire that explodes in a radius on impact

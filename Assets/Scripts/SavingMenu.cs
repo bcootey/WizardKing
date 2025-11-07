@@ -6,6 +6,7 @@ public class SavingMenu : MonoBehaviour
     public GameObject savingMenu;
     public GameObject upgradeMenu;
     public GameObject travelMenu;
+    public GameObject spellMenu;
     private GameObject currentMenu;
     
     public TextMeshProUGUI locationText;
@@ -28,6 +29,13 @@ public class SavingMenu : MonoBehaviour
         savingMenu.SetActive(false);
         travelMenu.SetActive(true);
         currentMenu = travelMenu;
+    }
+
+    public void SpellButton()
+    {
+        savingMenu.SetActive(false);
+        spellMenu.SetActive(true);
+        currentMenu = spellMenu;
     }
 
     public void ClosePopUpMenu()

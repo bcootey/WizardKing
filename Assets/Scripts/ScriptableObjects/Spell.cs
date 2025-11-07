@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 [CreateAssetMenu(fileName = "Spell", menuName = "ScriptableObjects/Spell")]
 public class Spell : ScriptableObject
 {
@@ -20,6 +21,10 @@ public class Spell : ScriptableObject
     [Header("Doesnt change anything unless its an Ultimate")]
     [Tooltip("in seconds")]
     public int chargingTime;
+    
+    [Header("Information")]
+    public Sprite icon;
+    public String description;
 }
 public enum SpellType
 {

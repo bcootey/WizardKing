@@ -21,3 +21,5 @@ MonoBehaviour:
   spellReticle: {fileID: 5523769866277747746, guid: 45aa12beda996dc47875553a3a79f1f8, type: 3}
   spellInstance: {fileID: 8922702557949559417, guid: 06b75f650eb364d4f964c24cabbad6a2, type: 3}
   chargingTime: 1
+  icon: {fileID: 35139938, guid: 220dc9cbc11c3fc49b141e13d57fa31a, type: 3}
+  description: Summons a small explosion on reticle

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8365274521231179172}
   - component: {fileID: 8218391177966585941}
   - component: {fileID: 889976902097811572}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RingBurst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4890,6 +4890,11 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4911,6 +4916,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -4957,7 +4963,7 @@ GameObject:
   - component: {fileID: 6806769040758022264}
   - component: {fileID: 2647852472065273014}
   - component: {fileID: 3857564752770147741}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CenterBurst (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9720,6 +9726,11 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9742,6 +9753,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -9788,7 +9800,7 @@ GameObject:
   - component: {fileID: 4770668653872637879}
   - component: {fileID: 5819981572816083438}
   - component: {fileID: 4853489422936690665}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeEffect (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14609,6 +14621,11 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14630,6 +14647,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -14676,7 +14694,7 @@ GameObject:
   - component: {fileID: 9154584888128219981}
   - component: {fileID: 2493475785366432411}
   - component: {fileID: 2960577683449217819}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CenterBurst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19439,6 +19457,11 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -19461,6 +19484,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -19507,7 +19531,7 @@ GameObject:
   - component: {fileID: 4048430013940825416}
   - component: {fileID: 5196554767896105345}
   - component: {fileID: 3162652204860982757}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CenterBurst (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24270,6 +24294,11 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -24292,6 +24321,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -24338,7 +24368,7 @@ GameObject:
   - component: {fileID: 1038723677058618091}
   - component: {fileID: 3459571322294641725}
   - component: {fileID: 6988228975001727300}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ExplosionsParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29159,6 +29189,11 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -29180,6 +29215,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -29225,8 +29261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 102735185456923251}
   - component: {fileID: 7343761662264294328}
-  - component: {fileID: 5290596913369499983}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: NukeEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29262,19 +29297,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seconds: 5
---- !u!114 &5290596913369499983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2982216173027557224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8301971b76c951648be497c9f8cef106, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startDelay: 0
 --- !u!1 &4189284320078362535
 GameObject:
   m_ObjectHideFlags: 0
@@ -29286,7 +29308,7 @@ GameObject:
   - component: {fileID: 3086394282742558475}
   - component: {fileID: 5419640052995847271}
   - component: {fileID: 7747685158725707286}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeEffect (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34107,6 +34129,11 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -34128,6 +34155,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -34174,7 +34202,7 @@ GameObject:
   - component: {fileID: 8393652739986349087}
   - component: {fileID: 7228969493404948951}
   - component: {fileID: 1086983358360299075}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CenterBurst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38937,6 +38965,11 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -38959,6 +38992,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -39008,7 +39042,7 @@ GameObject:
   - component: {fileID: 7375088912086740231}
   - component: {fileID: 7779514120392910704}
   - component: {fileID: 4361127374319203144}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: NukeEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43776,6 +43810,11 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -43798,6 +43837,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -43877,10 +43917,10 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5514534367945754547}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -43908,7 +43948,7 @@ GameObject:
   - component: {fileID: 7578792863420264971}
   - component: {fileID: 902685262442880662}
   - component: {fileID: 2914601889200811926}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ExplosionsParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48729,6 +48769,11 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -48750,6 +48795,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -48796,7 +48842,7 @@ GameObject:
   - component: {fileID: 7668900618866964552}
   - component: {fileID: 502707739280314014}
   - component: {fileID: 3096643505188048}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CenterBurst (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53559,6 +53605,11 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -53581,6 +53632,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -53627,7 +53679,7 @@ GameObject:
   - component: {fileID: 3695851716384420019}
   - component: {fileID: 1167417244354756726}
   - component: {fileID: 804260402017517229}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FireballExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58455,6 +58507,11 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -58476,6 +58533,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -58522,7 +58580,7 @@ GameObject:
   - component: {fileID: 3433761380618954850}
   - component: {fileID: 1381738280944681428}
   - component: {fileID: 5092402946818954672}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeEffect (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63343,6 +63401,11 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -63364,6 +63427,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -63410,7 +63474,7 @@ GameObject:
   - component: {fileID: 7820287481204883358}
   - component: {fileID: 7458149601928612604}
   - component: {fileID: 2094018694231258264}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68231,6 +68295,11 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -68252,6 +68321,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -68298,7 +68368,7 @@ GameObject:
   - component: {fileID: 7092207955373245271}
   - component: {fileID: 1682461398995824640}
   - component: {fileID: 8445888725216171142}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FireballExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73123,6 +73193,11 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -73144,6 +73219,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -73190,7 +73266,7 @@ GameObject:
   - component: {fileID: 1556794487477991845}
   - component: {fileID: 4912828556861576898}
   - component: {fileID: 5564803413329042283}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RingBurst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78069,6 +78145,11 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -78090,6 +78171,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -78136,7 +78218,7 @@ GameObject:
   - component: {fileID: 6057993816739694505}
   - component: {fileID: 2150837259696280521}
   - component: {fileID: 6269556984222879898}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CenterBurst (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82899,6 +82981,11 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -82921,6 +83008,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0

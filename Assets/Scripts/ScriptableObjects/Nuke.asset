@@ -21,3 +21,6 @@ MonoBehaviour:
   spellReticle: {fileID: 219565597005295555, guid: 0776ee660b760a048b034511047dd219, type: 3}
   spellInstance: {fileID: 2982216173027557224, guid: db331933e6c0cc749ba0eea5716028a1, type: 3}
   chargingTime: 2
+  icon: {fileID: 21300000, guid: 6309f074664a4734e9ab5655d661e3bc, type: 3}
+  description: Unleashes a devastating explosion of fire magic, destroying everthing
+    in its radius

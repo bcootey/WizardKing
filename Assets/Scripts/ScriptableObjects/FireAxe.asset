@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 407ed8a6fb97f354fbe9a0e2afa2c158, type: 3}
   m_Name: FireAxe
   m_EditorClassIdentifier: Assembly-CSharp::Spell
-  spellName: FireAxe
+  spellName: Fire Axe
   mana: 87
   damageMod: 0.9
   speed: 0
@@ -21,3 +21,5 @@ MonoBehaviour:
   spellReticle: {fileID: 0}
   spellInstance: {fileID: 5741936400995382116, guid: 39cc6b48bbc8536408a9be7d638d17a9, type: 3}
   chargingTime: 0
+  icon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  description: Hurl a flaming axe that returns to you after a short delay
