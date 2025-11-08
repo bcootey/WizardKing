@@ -5,7 +5,19 @@ using UnityEngine;
 public class Mana : MonoBehaviour
 {
     public float manaRegenSpeed;
-    
+    public static Mana instance { get; private set; }
+    private void Awake()
+    {
+        // Enforce singleton pattern
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
     public bool CanUseSpell(Spell spell)
     {
         if (spell.mana > PlayerStats.instance.currentMana)

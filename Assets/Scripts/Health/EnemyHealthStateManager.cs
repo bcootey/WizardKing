@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealthStateManager : MonoBehaviour, IHealth
+public class EnemyHealthStateManager : MonoBehaviour, IHealth, IDropsCoins
 {
     private EnemyHealthBaseState currentState;
     public enum EnemyShieldState
@@ -31,7 +31,15 @@ public class EnemyHealthStateManager : MonoBehaviour, IHealth
     public Transform pickupSpawnPoint;
     [Header("Experience")]
     public int experienceOnKill;
-    
+
+    [Header("Coins")] 
+    public GameObject coinPursePrefab;
+    public Transform coinPurseSpawnPoint;
+    [SerializeField] private int coinsMin;
+    [SerializeField] private int coinsMax;
+    public int CoinsMin { get => coinsMin; set => coinsMin = value; }
+    public int CoinsMax { get => coinsMax; set => coinsMax = value; }
+
     void Start()
     {
         _currentHealth = _maxHealth;
@@ -58,14 +66,22 @@ public class EnemyHealthStateManager : MonoBehaviour, IHealth
     {
         if (_currentHealth <= 0)
         {
-            //make death logic
-            Instantiate(goreEffect,goreSpawnPoint.position, goreSpawnPoint.rotation);
-            Debug.Log("Im dead");
-            SpawnPickups();
-            GiveExperience();
-            //stupid death logic
+            EnemyDeath();
             Destroy(this.gameObject);
         }
+    }
+    public void DropCoins()
+    {
+        int coins = Random.Range(CoinsMin, CoinsMax + 1);
+        SpawnCoinPurseAndAddForce(coins);
+    }
+
+    private void EnemyDeath() //what happens when the enemy dies
+    {
+        Instantiate(goreEffect,goreSpawnPoint.position, goreSpawnPoint.rotation);
+        SpawnPickups();
+        DropCoins();
+        GiveExperience();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -110,6 +126,16 @@ public class EnemyHealthStateManager : MonoBehaviour, IHealth
             rb.AddForce(GetRandomSpawnDirection().normalized * 6, ForceMode.Impulse);
         }
     }
+    private void SpawnCoinPurseAndAddForce(int coin)
+    {
+        GameObject spawnedPickup = Instantiate(coinPursePrefab, coinPurseSpawnPoint.position, Quaternion.identity);
+        Rigidbody rb = spawnedPickup.GetComponent<Rigidbody>();
+        spawnedPickup.GetComponentInChildren<CoinPurse>().coinAmount = coin;
+        if (rb != null)
+        {
+            rb.AddForce(GetRandomSpawnDirection().normalized * 3, ForceMode.Impulse);
+        }
+    }
 
     private void TryToTakeDamage(int damage, IDamageDealer dealer)
     {
@@ -136,5 +162,6 @@ public class EnemyHealthStateManager : MonoBehaviour, IHealth
         Experience experience = GameObject.Find("Pyromancer").GetComponent<Experience>();
         experience.GainExperience(experienceOnKill);
     }
+    
 }
 

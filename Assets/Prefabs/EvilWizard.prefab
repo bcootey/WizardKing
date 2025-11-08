@@ -5082,6 +5082,7 @@ Transform:
   - {fileID: 5731551563001917908}
   - {fileID: 7210796338131762396}
   - {fileID: 152203496764387318}
+  - {fileID: 1461763377359796299}
   - {fileID: 6245228030544813153}
   - {fileID: 2152424558599320966}
   m_Father: {fileID: 0}
@@ -5159,6 +5160,10 @@ MonoBehaviour:
   - {fileID: 5807000257000602882, guid: 7e6027dfca437a84589f79c16377ae11, type: 3}
   pickupSpawnPoint: {fileID: 152203496764387318}
   experienceOnKill: 135
+  coinPursePrefab: {fileID: 6895531053773003407, guid: 62d43912b0fcac9469f2c0102ab0df0c, type: 3}
+  coinPurseSpawnPoint: {fileID: 1461763377359796299}
+  coinsMin: 87
+  coinsMax: 123
 --- !u!136 &671902691522941454
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10598,6 +10603,37 @@ Transform:
   - {fileID: 5660274766151535348}
   m_Father: {fileID: 927175330600387105}
   m_LocalEulerAnglesHint: {x: -75.1335, y: 90, z: -90}
+--- !u!1 &5210499166465093952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1461763377359796299}
+  m_Layer: 6
+  m_Name: CoinSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1461763377359796299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5210499166465093952}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.745, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6101632157107408819}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5361057621480089817
 GameObject:
   m_ObjectHideFlags: 0
