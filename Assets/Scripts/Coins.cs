@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 public class Coins : MonoBehaviour
 {
     public static Coins instance { get; private set; }
@@ -9,7 +10,7 @@ public class Coins : MonoBehaviour
     public TextMeshProUGUI coinsHeldText;
     public GameObject coinGainTextPrefab;
     public RectTransform coinTextTransform;
-    public Vector3 popupOffset = new Vector3(0f, -40f, 0f);
+    public Vector3 popupOffset;
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -26,7 +27,7 @@ public class Coins : MonoBehaviour
     {
         coinsHeld += amount;
         UpdateCoinText();
-        ShowCoinPopup(amount);
+        ShowCoinPopup(amount, 1); //type 1 means its adding coins
     }
 
     public void DecreaseCoins(int amount)
@@ -44,16 +45,49 @@ public class Coins : MonoBehaviour
         coinsHeldText.text = coinsHeld.ToString();
     }
     
-    public void ShowCoinPopup(int amount)
+    public void ShowCoinPopup(int amount, int type) //type 1 means adding coins and type -1 means decreasing coins
     {
         GameObject popup = Instantiate(coinGainTextPrefab, coinTextTransform.parent);
         
-        popup.transform.position = coinTextTransform.position + popupOffset;
+        popup.transform.position = coinTextTransform.position + GetRandomPopupOffSet();
         
         TextMeshProUGUI tmp = popup.GetComponent<TextMeshProUGUI>();
         if (tmp != null)
-            tmp.text = "" + amount;
+        {
+            if (type == 1)
+            {
+                tmp.text = "+" + amount;
+            }
+        }
+        StartCoroutine(PopupFade(popup));
 
+    }
+
+    private Vector3 GetRandomPopupOffSet()
+    {
+        Vector3 offset = new Vector3(Random.Range(-15,16), Random.Range(-25, -46), Random.Range(-15, 16));
+        return offset;
+    }
+
+    private IEnumerator PopupFade(GameObject popup)
+    {
+        CanvasGroup cg = popup.GetComponent<CanvasGroup>();
+        Vector3 startPos = popup.transform.position;
+        Vector3 endPos = startPos + Vector3.up * 40f;
+        
+        float duration = 1.2f;
+        float time = 0f;
+
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            float progress = time / duration;
+
+            popup.transform.position = Vector3.Lerp(startPos, endPos, progress);
+            if (cg) cg.alpha = 1f - progress;
+
+            yield return null;
+        }
     }
     
     

@@ -69,30 +69,35 @@ public class UpgradeMenu : MonoBehaviour
                 PlayerStats.instance.maxHealth += 150;
                 PlayerStats.instance.skillPoints -= 1;
                 DisplayNextUpgradeText("HealthButton");
+                RemoveUpgradeText();
                 UpdateText();
                 break;
             case "Mana":
                 PlayerStats.instance.maxMana += 75;
                 PlayerStats.instance.skillPoints -= 1;
                 DisplayNextUpgradeText("ManaButton");
+                RemoveUpgradeText();
                 UpdateText();
                 break;
             case "Damage":
                 PlayerStats.instance.baseDamage += 3;
                 PlayerStats.instance.skillPoints -= 1;
                 DisplayNextUpgradeText("DamageButton");
+                RemoveUpgradeText();
                 UpdateText();
                 break;
             case "MagicDamage":
                 PlayerStats.instance.baseMagicDamage += 6;
                 PlayerStats.instance.skillPoints -= 1;
                 DisplayNextUpgradeText("MagicDamageButton");
+                RemoveUpgradeText();
                 UpdateText();
                 break;
             case "Luck":
                 PlayerStats.instance.luck += 5;
                 PlayerStats.instance.skillPoints -= 1;
                 DisplayNextUpgradeText("LuckButton");
+                RemoveUpgradeText();
                 UpdateText();
                 break;
             default:
@@ -160,6 +165,16 @@ public class UpgradeMenu : MonoBehaviour
         }
         
         return nextUpgradeValue;
+    }
+
+    private void RemoveUpgradeText() //if there is no skill points then remove the text otherwise keep in
+    {
+        if (PlayerStats.instance.skillPoints == 0)
+        {
+            upgradeInformationText.text = "";
+            nextUpgradeText.text = "";
+        }
+        return;
     }
 
 }

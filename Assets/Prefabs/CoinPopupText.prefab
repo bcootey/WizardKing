@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8013279981933026598}
   - component: {fileID: 5812127119480548784}
   - component: {fileID: 3579044978402698029}
+  - component: {fileID: 801272256097420835}
   m_Layer: 5
   m_Name: CoinPopupText
   m_TagString: Untagged
@@ -150,3 +151,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeleteInSeconds
   seconds: 1.3
+--- !u!225 &801272256097420835
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295888665992973746}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
