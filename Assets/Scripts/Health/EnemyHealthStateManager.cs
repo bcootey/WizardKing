@@ -25,6 +25,10 @@ public class EnemyHealthStateManager : MonoBehaviour, IHealth, IDropsCoins
     [Header("Gore Effects")]
     public GameObject goreEffect;
     public Transform goreSpawnPoint;
+    [Header("materials")]
+    public SkinnedMeshRenderer skinnedMeshRenderer;
+    public Material defualtMaterial;
+    public Material hitMaterial;
     
     [Header("Pickups")]
     public GameObject[] pickup;
@@ -63,6 +67,7 @@ public class EnemyHealthStateManager : MonoBehaviour, IHealth, IDropsCoins
     {
         _currentHealth -= amount;
         SpawnDamageNumbers(amount);
+        ChangeToHitMaterial();
         HitStop.instance.Stop(.1f);
         CheckIfDead();
     }
@@ -179,6 +184,18 @@ public class EnemyHealthStateManager : MonoBehaviour, IHealth, IDropsCoins
 
         TextMeshPro damageText = damageNumbers.GetComponentInChildren<TextMeshPro>();
         damageText.text = damage.ToString();
+    }
+
+    private void ChangeToHitMaterial()
+    {
+        StartCoroutine(ChangeToHit());
+    }
+
+    private IEnumerator ChangeToHit()
+    {
+        skinnedMeshRenderer.material = hitMaterial;
+        yield return new WaitForSeconds(.05f);
+        skinnedMeshRenderer.material = defualtMaterial;
     }
     
 }

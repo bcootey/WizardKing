@@ -5156,6 +5156,9 @@ MonoBehaviour:
   _currentHealth: 0
   goreEffect: {fileID: 4345010857022157986, guid: af7d9ade5f4121c4980c6ab9a304e681, type: 3}
   goreSpawnPoint: {fileID: 208840481743412847}
+  skinnedMeshRenderer: {fileID: 7972435038946124941}
+  defualtMaterial: {fileID: 2100000, guid: 7939009f1e33171439225ee28431477f, type: 2}
+  hitMaterial: {fileID: 2100000, guid: eebda079f7272c94fb4ef0aadb7de086, type: 2}
   pickup:
   - {fileID: 4487984375688926092, guid: bf0d3dbb9e4ddcf4db64b8af46900dc1, type: 3}
   - {fileID: 5807000257000602882, guid: 7e6027dfca437a84589f79c16377ae11, type: 3}
