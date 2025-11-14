@@ -17,10 +17,23 @@ public class Experience : MonoBehaviour
     }
     public void TryToLevelUp() //attempts to level up the player if experience is over threshold
     {
-        if (PlayerStats.instance.experience >= experienceToLevelUp)
+        if (CanLevelUp())
         {
             LevelUp();
         }
+    }
+    public bool CanLevelUp()
+    {
+        if (PlayerStats.instance.experience >= experienceToLevelUp)
+        {
+            return true;
+        }
+        return false;
+    }
+    public void GainExperience(float amount)
+    {
+        PlayerStats.instance.experience += amount;
+        UpdateExperienceHUD();
     }
 
     private void UpdateExperienceHUD()
@@ -42,11 +55,5 @@ public class Experience : MonoBehaviour
         experienceSlider.maxValue = experienceToLevelUp;
     }
 
-    public void GainExperience(float amount)
-    {
-        PlayerStats.instance.experience += amount;
-        UpdateExperienceHUD();
-    }
-    
-    
+
 }

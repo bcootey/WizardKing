@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class EnemyHealthStateManager : MonoBehaviour, IHealth, IDropsCoins
 {
     private EnemyHealthBaseState currentState;
@@ -39,6 +39,9 @@ public class EnemyHealthStateManager : MonoBehaviour, IHealth, IDropsCoins
     [SerializeField] private int coinsMax;
     public int CoinsMin { get => coinsMin; set => coinsMin = value; }
     public int CoinsMax { get => coinsMax; set => coinsMax = value; }
+    
+    [Header("DamageNumbers")]
+    public GameObject damageNumberPrefab;
 
     void Start()
     {
@@ -59,6 +62,7 @@ public class EnemyHealthStateManager : MonoBehaviour, IHealth, IDropsCoins
     public void TakeDamage(int amount)
     {
         _currentHealth -= amount;
+        SpawnDamageNumbers(amount);
         HitStop.instance.Stop(.1f);
         CheckIfDead();
     }
@@ -161,6 +165,20 @@ public class EnemyHealthStateManager : MonoBehaviour, IHealth, IDropsCoins
     {
         Experience experience = GameObject.Find("Pyromancer").GetComponent<Experience>();
         experience.GainExperience(experienceOnKill);
+    }
+
+    private void SpawnDamageNumbers(int damage)
+    {
+        float radius = 0.5f;
+        
+        Vector3 randomDir = Random.onUnitSphere;
+        
+        randomDir.y = Mathf.Abs(randomDir.y) * 0.4f;
+        Vector3 spawnPos = goreSpawnPoint.transform.position + randomDir.normalized * radius;
+        GameObject damageNumbers = Instantiate(damageNumberPrefab, spawnPos, goreSpawnPoint.transform.rotation);
+
+        TextMeshPro damageText = damageNumbers.GetComponentInChildren<TextMeshPro>();
+        damageText.text = damage.ToString();
     }
     
 }

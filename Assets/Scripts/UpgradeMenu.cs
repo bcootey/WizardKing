@@ -13,6 +13,8 @@ public class UpgradeMenu : MonoBehaviour
     
     public TextMeshProUGUI upgradeInformationText;
     public TextMeshProUGUI nextUpgradeText;
+    
+    public TextMeshProUGUI canLevelUpText;
     [Header("Upgrade Buttons")]
     public GameObject[] upgradeButtons;
     [Header("references")]
@@ -30,6 +32,14 @@ public class UpgradeMenu : MonoBehaviour
 
     void Update()
     {
+        if (experience.CanLevelUp())
+        {
+            canLevelUpText.text = "Level Up";
+        }
+        else
+        {
+            canLevelUpText.text = "";
+        }
         if (PlayerStats.instance.skillPoints >= 1)
         {
             ButtonsActive();

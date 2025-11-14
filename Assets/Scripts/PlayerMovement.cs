@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Sensitivity = SensitivityManager.Sensitivity; 
     }
 
 
@@ -63,5 +64,9 @@ public class PlayerController : MonoBehaviour
             transform.Rotate(0f, PlayerMouseInput.x * Sensitivity, 0f);
             PlayerCamera.transform.localRotation = Quaternion.Euler(xRot, 0f, 0f);
         }
+    }
+    public void SetSensitivity()
+    {
+        Sensitivity = SensitivityManager.Sensitivity; 
     }
 }

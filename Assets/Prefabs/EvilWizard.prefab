@@ -5165,6 +5165,7 @@ MonoBehaviour:
   coinPurseSpawnPoint: {fileID: 1461763377359796299}
   coinsMin: 87
   coinsMax: 123
+  damageNumberPrefab: {fileID: 7695927335171878979, guid: 9c00c6c77da145e4d9c07fafc686c6aa, type: 3}
 --- !u!136 &671902691522941454
 CapsuleCollider:
   m_ObjectHideFlags: 0

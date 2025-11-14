@@ -51,7 +51,7 @@ public class Coins : MonoBehaviour
         
         popup.transform.position = coinTextTransform.position + GetRandomPopupOffSet();
         
-        TextMeshProUGUI tmp = popup.GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI tmp = popup.GetComponentInChildren<TextMeshProUGUI>();
         if (tmp != null)
         {
             if (type == 1)
@@ -72,20 +72,15 @@ public class Coins : MonoBehaviour
     private IEnumerator PopupFade(GameObject popup)
     {
         CanvasGroup cg = popup.GetComponent<CanvasGroup>();
-        Vector3 startPos = popup.transform.position;
-        Vector3 endPos = startPos + Vector3.up * 40f;
         
-        float duration = 1.2f;
+        float duration =.78f;
         float time = 0f;
 
         while (time < duration)
         {
             time += Time.deltaTime;
             float progress = time / duration;
-
-            popup.transform.position = Vector3.Lerp(startPos, endPos, progress);
             if (cg) cg.alpha = 1f - progress;
-
             yield return null;
         }
     }

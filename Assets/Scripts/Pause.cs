@@ -4,6 +4,7 @@ public class Pause : MonoBehaviour
 {
     public static Pause instance { get; private set; }
     public bool isPaused = false;
+    public int gameObjectsCallingPause = 0;
 
     void Awake()
     {
@@ -25,15 +26,29 @@ public class Pause : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        gameObjectsCallingPause++;
     }
 
     public void ResumeGame()
     {
-        Time.timeScale = 1f;
-        isPaused = false;
+        gameObjectsCallingPause--;
+        if (gameObjectsCallingPause == 0)
+        {
+            Time.timeScale = 1f;
+            isPaused = false;
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            return;
+        }
+    }
+
+    public bool IsPaused()
+    {
+        return isPaused;
     }
 
 }

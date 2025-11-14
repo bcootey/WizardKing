@@ -16,4 +16,4 @@ MonoBehaviour:
   speed: 17
   spellType: 1
   spellInstance: {fileID: 5099857399434278801, guid: 160aeaa333efe2242a1045ef76a3804a, type: 3}
-  spellSigil: {fileID: 4759381074352726655, guid: d6103116172bf344d9708da5313da4b3, type: 3}
+  spellSigil: {fileID: 4767103848698763616, guid: c8e3036230facb44a9e33142514d1fc8, type: 3}
