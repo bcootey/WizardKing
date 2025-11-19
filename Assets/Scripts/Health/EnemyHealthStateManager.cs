@@ -46,6 +46,9 @@ public class EnemyHealthStateManager : MonoBehaviour, IHealth, IDropsCoins
     
     [Header("DamageNumbers")]
     public GameObject damageNumberPrefab;
+    [Header("SoundEffects")]
+    public GameObject hitAudioSource;
+    public AudioClip[] hitEffects;
 
     void Start()
     {
@@ -68,6 +71,7 @@ public class EnemyHealthStateManager : MonoBehaviour, IHealth, IDropsCoins
         _currentHealth -= amount;
         SpawnDamageNumbers(amount);
         ChangeToHitMaterial();
+        PlayHitSoundEffect();
         HitStop.instance.Stop(.1f);
         CheckIfDead();
     }
@@ -196,6 +200,13 @@ public class EnemyHealthStateManager : MonoBehaviour, IHealth, IDropsCoins
         skinnedMeshRenderer.material = hitMaterial;
         yield return new WaitForSeconds(.05f);
         skinnedMeshRenderer.material = defualtMaterial;
+    }
+    private void PlayHitSoundEffect()
+    {
+        int rand  = Random.Range(0, hitEffects.Length);
+        GameObject soundEffect = Instantiate(hitAudioSource,goreEffect.transform.position,goreEffect.transform.rotation);
+        soundEffect.GetComponent<AudioSource>().clip = hitEffects[rand];
+        soundEffect.GetComponent<AudioSource>().Play();
     }
     
 }

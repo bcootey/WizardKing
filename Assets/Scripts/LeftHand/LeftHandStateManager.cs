@@ -21,7 +21,8 @@ public class LeftHandStateManager : MonoBehaviour
     //public FPScontroller FPScontroller;
     [Header("mana")]
     public Mana mana;
-
+    [Header("SoundEffects")]
+    public AudioSource castingSound;
     void Start()
     {
         mainCamera = Camera.main;

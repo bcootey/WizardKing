@@ -5169,6 +5169,11 @@ MonoBehaviour:
   coinsMin: 87
   coinsMax: 123
   damageNumberPrefab: {fileID: 7695927335171878979, guid: 9c00c6c77da145e4d9c07fafc686c6aa, type: 3}
+  hitAudioSource: {fileID: 2322595222512954362, guid: 296eb754eb23b314794ccd535641e41d, type: 3}
+  hitEffects:
+  - {fileID: 8300000, guid: 46bfdb3d00e4f8d4aaf14352631370b2, type: 3}
+  - {fileID: 8300000, guid: 73921ce78385a674aa834388d234ab08, type: 3}
+  - {fileID: 8300000, guid: 9a453f18c08f4714a82b67760f8269ce, type: 3}
 --- !u!136 &671902691522941454
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -4849,6 +4849,7 @@ GameObject:
   - component: {fileID: 8966929742834614993}
   - component: {fileID: 479035905315684627}
   - component: {fileID: 4493774075068644031}
+  - component: {fileID: 4159050347855962612}
   m_Layer: 0
   m_Name: FireAxeThrowable
   m_TagString: Untagged
@@ -4932,6 +4933,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeleteInSeconds
   seconds: 10
+--- !u!114 &4159050347855962612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5741936400995382116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb59c7123695f246be6ff298effa9c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySoundEffectInstance
+  audioPrefab: {fileID: 2322595222512954362, guid: cb5fa070f17ee9f4aadbd8c9539b155d, type: 3}
 --- !u!1 &8006466755387275616
 GameObject:
   m_ObjectHideFlags: 0

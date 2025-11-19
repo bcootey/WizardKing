@@ -9,6 +9,7 @@ public class LeftHandCastingState : LeftHandBaseState
     {
         stateManager.leftHandAnim.SetTrigger("Cast");
         stateManager.casting = true;
+        stateManager.castingSound.Play();
         
     }
     public override void UpdateState()
