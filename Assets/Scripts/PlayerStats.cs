@@ -28,15 +28,14 @@ public class PlayerStats : MonoBehaviour
     public TextMeshProUGUI manaText;
     private void Awake()
     {
-        // Singleton pattern: Ensure only one instance exists
         if (instance != null && instance != this)
         {
-            Destroy(gameObject); // Optionally keep one instance
+            Destroy(gameObject);
             return;
         }
 
         instance = this;
-        DontDestroyOnLoad(gameObject); // Optional: keep across scenes
+        DontDestroyOnLoad(gameObject);
     }
 
     public void UpdateHud()
@@ -51,7 +50,6 @@ public class PlayerStats : MonoBehaviour
     private float NormalizeValue(float min, float max, float number)
     {
         float normalizedNumber = (float)(number - min) / (max - min);
-        //Debug.Log(normalizedNumber);
         return normalizedNumber;
     }
     private void Update()

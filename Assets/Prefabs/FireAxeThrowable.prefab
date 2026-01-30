@@ -4920,6 +4920,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   player: {fileID: 0}
+  spellDamage: {fileID: 7414508788052606609}
 --- !u!114 &4493774075068644031
 MonoBehaviour:
   m_ObjectHideFlags: 0

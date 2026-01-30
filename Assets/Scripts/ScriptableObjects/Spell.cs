@@ -25,6 +25,7 @@ public class Spell : ScriptableObject
     [Header("Information")]
     public Sprite icon;
     public String description;
+    public int cost;
 }
 public enum SpellType
 {

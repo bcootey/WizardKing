@@ -9,9 +9,9 @@ public class RightHandSwing2 : RightHandBaseState
     {
         stateManager.rightHandAnim.SetTrigger("Swing2");
         //code to get attack value and normalize it
-        stateManager.currentAttackDamage = stateManager.playerStats.baseDamage * 1.2f;
-        stateManager.currentAttackDamageNormalized = Mathf.RoundToInt(stateManager.currentAttackDamage);
-        stateManager.UpdateAttackDamage(stateManager.currentAttackDamageNormalized);
+        //stateManager.currentAttackDamage = stateManager.playerStats.baseDamage * 1.2f;
+        //stateManager.currentAttackDamageNormalized = Mathf.RoundToInt(stateManager.currentAttackDamage);
+        //stateManager.UpdateAttackDamage(stateManager.currentAttackDamageNormalized);
     }
     public override void UpdateState()
     {

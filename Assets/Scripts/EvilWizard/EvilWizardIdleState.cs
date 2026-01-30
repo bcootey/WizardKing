@@ -7,19 +7,23 @@ public class EvilWizardIdleState : EvilWizardBaseState
     public EvilWizardIdleState(EvilWizardStateManager manager) : base(manager) { }
     public override void EnterState()
     {
-        Debug.Log("IdleState");
         stateManager.wizardAnim.SetBool("Walk", false);
         stateManager.wizardNav.ResetPath();
     }
     public override void UpdateState()
     {
+        stateManager.spellCooldownTimer += Time.deltaTime;
+        if (stateManager.spellCooldownTimer >= stateManager.spellCooldownTime)
+        {
+            stateManager.spellCooldownTimer = 0;
+            if (stateManager.spellInRange.IsTargetInRange())
+            {
+                stateManager.SetNextState(new EvilWizardCastingState(stateManager));
+            }
+        }
         if (stateManager.meleeInRange.WasEntered())
         {
             stateManager.SetNextState(new EvilWizardMeleeState(stateManager));
-        }
-        if (stateManager.spellInRange.IsTargetInRange())
-        {
-            stateManager.SetNextState(new EvilWizardCastingState(stateManager));
         }
     }
     public override void ExitState()

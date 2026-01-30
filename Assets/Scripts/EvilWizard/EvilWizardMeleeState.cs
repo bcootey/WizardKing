@@ -7,19 +7,27 @@ public class EvilWizardMeleeState : EvilWizardBaseState
     public EvilWizardMeleeState(EvilWizardStateManager manager) : base(manager) { }
     public override void EnterState()
     {
-        Debug.Log("Melee State");
         stateManager.wizardAnim.SetBool("Walk",true);
     }
     public override void UpdateState()
     {
+        stateManager.meleeCooldownTimer += Time.deltaTime;
+        if (stateManager.meleeCooldownTimer >= stateManager.meleeCooldownTime)
+        {
+            if(stateManager.swingRange.WasEntered())
+            {
+                stateManager.meleeCooldownTimer = 0;
+                stateManager.wizardAnim.SetTrigger("Attack");
+            }
+        }
         stateManager.wizardNav.SetDestination(stateManager.playerStats.playerLocation.position);
         if (stateManager.meleeInRange.WasExited())
         {
             stateManager.SetNextState(new EvilWizardIdleState(stateManager));
         }
-        if(stateManager.swingRange.WasEntered())
+        if (stateManager.IsParried)
         {
-            stateManager.wizardAnim.SetTrigger("Attack");
+            stateManager.SetNextState(new EvilWizardStunState(stateManager));
         }
     }
     public override void ExitState()

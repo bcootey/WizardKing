@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fireball
   m_EditorClassIdentifier: 
   spellName: Fireball
-  mana: 110
+  mana: 120
   damageMod: 1.5
   speed: 14
   spellType: 0

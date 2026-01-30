@@ -39,7 +39,7 @@ public class Experience : MonoBehaviour
     private void UpdateExperienceHUD()
     {
         experienceSlider.value = PlayerStats.instance.experience;
-        experienceText.text = "Experience: " + PlayerStats.instance.experience + "/" + experienceToLevelUp;
+        experienceText.text = "Experience: " + Mathf.Round(PlayerStats.instance.experience) + "/" + Mathf.Round(experienceToLevelUp);
     }
     private void LevelUp()
     {

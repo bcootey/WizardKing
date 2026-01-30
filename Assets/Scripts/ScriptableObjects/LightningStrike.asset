@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407ed8a6fb97f354fbe9a0e2afa2c158, type: 3}
+  m_Name: LightningStrike
+  m_EditorClassIdentifier: Assembly-CSharp::Spell
+  spellName: Lightning Strike
+  mana: 100
+  damageMod: 1.2
+  speed: 0
+  spellType: 0
+  spawnPoint: 1
+  spellReticle: {fileID: 5523769866277747746, guid: 45aa12beda996dc47875553a3a79f1f8, type: 3}
+  spellInstance: {fileID: 7836354635828859294, guid: d29615c1066654540931f18e181bd1e3, type: 3}
+  chargingTime: 0
+  icon: {fileID: 1187328293, guid: 47d81b221c9a5ac4eb82cc9dc75f0d53, type: 3}
+  description: Call down a bolt of lightning at the targeted location

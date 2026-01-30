@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58db75dee7e7ba142bcf81309f09a75c, type: 3}
   m_Name: MagicMissle
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDamageSources
-  damage: 68
+  damage: 80
   invincibilityFrames: -1

@@ -11,13 +11,14 @@ public class Teleporting : MonoBehaviour
     }
     private IEnumerator TeleportRoutine(SpawnPointData data)
     {
+        GameStateManager.instance.AddLoadingLock();
         savingMenu.ClosePopUpMenu();
         savingMenu.LeaveSaveMenu();
         playerTransform = PlayerStats.instance.transform;
         
         ScreenTransition.instance.StartFade(.75f, 1.5f);
         yield return new WaitForSeconds(1f);
-        // If target scene is different, load it
+        // if target scene is different, load it
         if (SceneManager.GetActiveScene().name != data.sceneName)
         {
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(data.sceneName);
@@ -28,6 +29,7 @@ public class Teleporting : MonoBehaviour
         playerTransform.position = data.position;
 
         Debug.Log($"Teleported player to {data.id} in scene {data.sceneName}");
+        GameStateManager.instance.RemoveLoadingLock();
     }
 
     private void CameraFix()
@@ -35,7 +37,7 @@ public class Teleporting : MonoBehaviour
         var cam = Camera.main;
         if (cam != null)
         {
-            var psx = cam.GetComponent<PSXEffects>(); // ← your script name
+            var psx = cam.GetComponent<PSXEffects>();
             if (psx != null)
             {
                 psx.enabled = false;

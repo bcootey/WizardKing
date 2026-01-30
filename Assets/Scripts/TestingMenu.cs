@@ -24,7 +24,7 @@ public class TestingMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             testingMenu.gameObject.SetActive(true);
-            Pause.instance.PauseGame();
+            GameStateManager.instance.AddPauseLock();
         }
         healthText.text = "Max Health: " + PlayerStats.instance.maxHealth;
         baseDamageText.text = "Base Damage: " + PlayerStats.instance.baseDamage;
@@ -37,7 +37,7 @@ public class TestingMenu : MonoBehaviour
     public void CloseMenu()
     {
         testingMenu.gameObject.SetActive(false);
-        Pause.instance.ResumeGame();
+        GameStateManager.instance.RemovePauseLock();
     }
 
     public void ChangeMaxHealth()

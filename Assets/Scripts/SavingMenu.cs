@@ -49,12 +49,12 @@ public class SavingMenu : MonoBehaviour
     public void LeaveSaveMenu()
     {
         savingMenu.SetActive(false);
-        Pause.instance.ResumeGame();
+        GameStateManager.instance.RemovePauseLock();
     }
     public void EnterSavingMenu(string locationName) //argument that the save point passes that gives location name to menu
     {
         locationText.text = locationName;
         savingMenu.SetActive(true);
-        Pause.instance.PauseGame();
+        GameStateManager.instance.AddPauseLock();
     }
 }

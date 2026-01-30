@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407ed8a6fb97f354fbe9a0e2afa2c158, type: 3}
+  m_Name: Fire Barrage
+  m_EditorClassIdentifier: Assembly-CSharp::Spell
+  spellName: Fire Barrage
+  mana: 90
+  damageMod: 0.5
+  speed: 9
+  spellType: 0
+  spawnPoint: 0
+  spellReticle: {fileID: 0}
+  spellInstance: {fileID: 4137341901546142164, guid: d261e3126149cfd4c8c798c51f99632a, type: 3}
+  chargingTime: 0
+  icon: {fileID: 953356095, guid: a152616ecafddf14894b4a7a61b37cd3, type: 3}
+  description: Hurl an orb of fire that detonates sending shards of fire forward

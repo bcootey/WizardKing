@@ -22,7 +22,7 @@ public class SavePoint : MonoBehaviour, IInteractable
         savingMenu = GameObject.Find("SavingMenu").GetComponent<SavingMenu>();
         playerInteractor = GameObject.Find("Pyromancer").GetComponent<PlayerInteractor>();
         
-        // Ask the manager if this one was already unlocked (from a previous scene)
+        //ask the manager if this one was already unlocked (from a previous scene)
         if (SpawnPointManager.instance != null)
         {
             isUnlocked = SpawnPointManager.instance.IsUnlocked(locationName);
@@ -62,7 +62,7 @@ public class SavePoint : MonoBehaviour, IInteractable
 
         string currentScene = SceneManager.GetActiveScene().name;
 
-        // Reload scene asynchronously
+        //reload scene asynchronously
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(currentScene);
         while (!asyncLoad.isDone)
             yield return null;

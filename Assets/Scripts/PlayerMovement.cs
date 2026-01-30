@@ -30,12 +30,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerMovementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
-        PlayerMouseInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+        if (GameStateManager.CanAcceptGameplayInput)
+        {
+            PlayerMovementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+            PlayerMouseInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
 
-        MovePlayer();
-        MovePlayerCamera();
-
+            MovePlayer();
+            MovePlayerCamera();
+        }
     }
 
     private void MovePlayer()
@@ -55,7 +57,7 @@ public class PlayerController : MonoBehaviour
 
     private void MovePlayerCamera()
     {
-        if (!Pause.instance.isPaused)
+        if (GameStateManager.CanAcceptGameplayInput)
         {
             xRot -= PlayerMouseInput.y * Sensitivity;
             xRot = Mathf.Clamp(xRot, -90f, 90f);

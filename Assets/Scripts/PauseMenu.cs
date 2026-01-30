@@ -5,12 +5,24 @@ public class PauseMenu : MonoBehaviour
     public GameObject PauseMenuUI;
     public PlayerController playerMovement;
     public GameObject savingMenu;
+    
     private bool menuOpen = false;
     void Update()
     {
+        if (GameStateManager.instance != null &&
+            GameStateManager.instance.State == GameState.Loading)
+            return;
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            OpenPauseMenu();
+            if (menuOpen)
+            {
+                ClosePauseMenu();
+            }
+            else
+            {
+                OpenPauseMenu();
+            }
         }
     }
 
@@ -20,8 +32,10 @@ public class PauseMenu : MonoBehaviour
     }
     private void ClosePauseMenu()
     {
+        if (!menuOpen) return;
+        
         menuOpen = false;
-        Pause.instance.ResumeGame();
+        GameStateManager.instance.RemovePauseLock();
         PauseMenuUI.SetActive(false);
         playerMovement.SetSensitivity();
     }
@@ -32,7 +46,7 @@ public class PauseMenu : MonoBehaviour
             return;
         }
         menuOpen = true;
-        Pause.instance.PauseGame();
+        GameStateManager.instance.AddPauseLock();
         PauseMenuUI.SetActive(true);
     }
 }

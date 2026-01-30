@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-public class EvilWizardStateManager : MonoBehaviour
+public class EvilWizardStateManager : MonoBehaviour, IParryable
 {
     private EvilWizardBaseState currentState;
     public Animator wizardAnim;
@@ -23,6 +23,26 @@ public class EvilWizardStateManager : MonoBehaviour
     public ParticleSystem dashEffect;
     public ParticleSystem slashEffect;
     public ParticleSystem slashEffect2;
+    [Header("Parry")] 
+    public bool isParryable;
+    public bool isParried;
+    [Header("LookAtPlayer")]
+    public LookAtPlayer lookAtPlayer;
+    [Header("Gameplay")] 
+    public float spellCooldownTime;
+    public float meleeCooldownTime;
+    public float spellCooldownTimer;
+    public float meleeCooldownTimer;
+    public bool IsParried
+    {
+        get => isParried;
+        set => isParried = value;
+    }
+    public bool IsParryable
+    {
+        get => isParryable;
+        set => isParryable = value;
+    }
     void Start()
     {
         wizardNav.speed = defaultSpeed;
@@ -95,6 +115,16 @@ public class EvilWizardStateManager : MonoBehaviour
     public void PlaySlashEffect2()
     {
         slashEffect2.Play();
+    }
+    
+    public void SetIsParryable()
+    {
+        IsParryable = true;
+    }
+
+    public void SetIsNotParryable()
+    {
+        IsParryable = false;
     }
 
 }

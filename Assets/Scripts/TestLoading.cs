@@ -15,7 +15,7 @@ public class TestLoading : MonoBehaviour, IInteractable
     {
         ScreenTransition.instance.StartFade(.2f, 2f);
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadSceneAsync("Stage2");
+        SceneManager.LoadSceneAsync("Intro");
         PlayerStats.instance.playerLocation.position = newPos;
     }
     

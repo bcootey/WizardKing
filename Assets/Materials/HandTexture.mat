@@ -41,6 +41,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Unlit: 1
+    - _VertexInaccuracy: -1
     m_Colors:
     - _Color: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 1}
   m_BuildTextureStacks: []

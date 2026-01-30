@@ -24472,9 +24472,9 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: -479233940399864944, guid: 521e2ad45180e39488aa0a09d3549dc6, type: 3}
   m_Mesh3: {fileID: -1299287303606733724, guid: 521e2ad45180e39488aa0a09d3549dc6, type: 3}
   m_MeshWeighting: 3
-  m_MeshWeighting1: 1
-  m_MeshWeighting2: 0.5
-  m_MeshWeighting3: 0.5
+  m_MeshWeighting1: 0.5
+  m_MeshWeighting2: 0.2
+  m_MeshWeighting3: 0.4
   m_MaskInteraction: 0
 --- !u!114 &5948969947079748364
 MonoBehaviour:

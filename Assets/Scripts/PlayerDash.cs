@@ -37,13 +37,15 @@ public class PlayerDash : MonoBehaviour
 
     void Update()
     {
-        // Dash Input
-        if (Input.GetKeyDown(KeyCode.LeftShift) && currentDashCharges > 0)
+        if (GameStateManager.CanAcceptGameplayInput)
         {
-            Vector3 dashDir = GetDashDirection();
-            StartCoroutine(Dash(dashDir));
+            if (Input.GetKeyDown(KeyCode.LeftShift) && currentDashCharges > 0)
+            {
+                Vector3 dashDir = GetDashDirection();
+                StartCoroutine(Dash(dashDir));
+            }
         }
-
+        
         if (isDashing)
         {
             dashTest.SetActive(true);

@@ -11,13 +11,14 @@ public class LeftHandIdleState : LeftHandBaseState
     }
     public override void UpdateState()
     {
+        if (!GameStateManager.CanAcceptGameplayInput)
+            return;
+        
         if (Input.GetMouseButtonDown(1))
         {
-            if (stateManager.mana.CanUseSpell(stateManager.currentSpell))
-            {
+            if (stateManager.mana.CanUseSpell(stateManager.currentSpell)) {
                 stateManager.mana.DecreaseMana(stateManager.currentSpell.mana);
                 stateManager.SetNextState(new LeftHandCastingState(stateManager));
-                Debug.Log("Test Spam");
             }
         }
         if (Input.GetKeyDown(KeyCode.R))

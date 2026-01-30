@@ -11,7 +11,7 @@ public class PlayerInteractor : MonoBehaviour
     public KeyCode interactKey = KeyCode.E;
     public Camera playerCamera;
     public TextMeshProUGUI promptText;
-    public float rayPauseDuration = 1f; // Default time to pause ray
+    public float rayPauseDuration = 1f; // default time to pause ray
 
     private IInteractable currentInteractable;
     private bool canCheckRay = true;
@@ -23,8 +23,8 @@ public class PlayerInteractor : MonoBehaviour
 
     void Update()
     {
-        // Skip raycast checks if disabled or paused
-        if (!canCheckRay || Pause.instance.isPaused)
+        //skip raycast checks if disabled or paused
+        if (!canCheckRay || !GameStateManager.CanAcceptGameplayInput)
         {
             ClearPrompt();
             return;

@@ -41,7 +41,7 @@ public class TravelMenu : MonoBehaviour
 
         activeButtons.Clear();
 
-        // Pull IDs from SpawnPointManager (now uses SpawnPointData)
+        // pull IDs from SpawnPointManager
         foreach (string id in SpawnPointManager.instance.GetUnlockedIDs())
             CreateSpawnPointButton(id);
     }
@@ -69,7 +69,7 @@ public class TravelMenu : MonoBehaviour
 
         text.text = spawnPointName;
 
-        // Add click listener for teleportation
+        //add click listener for teleportation
         button.onClick.AddListener(() => OnSpawnPointButtonClicked(spawnPointName));
 
         activeButtons.Add(spawnPointName, buttonObj);
@@ -79,7 +79,7 @@ public class TravelMenu : MonoBehaviour
     {
         Debug.Log($"Teleporting to {spawnPointName}");
 
-        // Use the new SpawnPointData from the manager
+        //use the SpawnPointData from the manager
         var data = SpawnPointManager.instance.GetSpawnPointData(spawnPointName);
 
         if (data == null)
@@ -87,8 +87,7 @@ public class TravelMenu : MonoBehaviour
             Debug.LogWarning($"No spawn point data found for {spawnPointName}");
             return;
         }
-
-        // Use coroutine from Teleporting to handle scene change + teleport
+        
         teleporting.StartTeleport(data);
     }
 }

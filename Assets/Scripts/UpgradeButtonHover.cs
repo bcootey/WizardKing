@@ -9,7 +9,7 @@ public class UpgradeButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerE
     [Header("Reference to the Upgrade Menu Script")]
     public UpgradeMenu upgradeMenu;
 
-    // Called when the mouse hovers over the button
+    //called when the mouse hovers over the button
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (upgradeMenu != null && !string.IsNullOrEmpty(buttonName))
@@ -18,7 +18,7 @@ public class UpgradeButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerE
         }
     }
 
-    // Called when the mouse stops hovering the button
+    //called when the mouse stops hovering the button
     public void OnPointerExit(PointerEventData eventData)
     {
         if (upgradeMenu != null)

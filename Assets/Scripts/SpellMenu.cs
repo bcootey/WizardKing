@@ -14,7 +14,6 @@ public class SpellMenu : MonoBehaviour
     public Image currentUltimateSpellHolderImage;
     
     [Header("Inventory Grid")]
-    [Tooltip("Parent transform that has the GridLayoutGroup and SpellItemHolder children")]
     public Transform inventoryRoot;
     
     [Header("DescriptionText")]
@@ -51,18 +50,18 @@ public class SpellMenu : MonoBehaviour
             return;
         }
 
-        // Name & type
+        //name & type
         if (nameText) nameText.text = string.IsNullOrEmpty(spell.spellName) ? "Unnamed Spell" : spell.spellName;
         if (typeText) typeText.text = $"Type: {spell.spellType}";
 
-        // Mana
+        //mana
         if (manaText) manaText.text = $"Mana: {spell.mana}";
 
-        // Damage modifier (x1 means no change). Also show +/- percentage for readability.
+        //damage modifier (x1 means no change). Also show +/- percentage for readability.
         if (damageText)
         {
             double mod = spell.damageMod == 0 ? 1.0 : spell.damageMod;
-            double pct = (mod - 1.0) * 100.0; // e.g., 1.25 -> +25%
+            double pct = (mod - 1.0) * 100.0;
             string pctPart = Mathf.Approximately((float)mod, 1f) ? "no modifier" : (pct >= 0 ? $"+{pct:0.#}%" : $"{pct:0.#}%");
             damageText.text = $"Damage: x{mod:0.##} ({pctPart})";
         }
@@ -131,11 +130,11 @@ public class SpellMenu : MonoBehaviour
         if (inventoryRoot == null) return;
 
         var slots = inventoryRoot.GetComponentsInChildren<SpellItemHolder>(true);
-        // Clear all first
+        //clear all first
         foreach (var slot in slots)
             slot.SetSpell(null);
 
-        // Fill in order
+        //fill in order
         int i = 0;
         foreach (var s in unlockedSpells)
         {

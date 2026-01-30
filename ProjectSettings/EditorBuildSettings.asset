@@ -14,5 +14,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage2.unity
     guid: 990f67b1ce3ed9240991bc9a42a4251a
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 0c39786a6f95d60498e4a7b58af941b4
+  - enabled: 1
+    path: Assets/Scenes/TowerOfThornsOutside.unity
+    guid: 1c40a7b34ef81a1479afd9db77578a9a
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

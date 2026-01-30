@@ -14,8 +14,10 @@ public class RightHandIdleState : RightHandBaseState
     }
     public override void UpdateState()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
+        if (!GameStateManager.CanAcceptGameplayInput)
+            return;
+        
+        if (Input.GetMouseButtonDown(0)) {
             stateManager.SetNextState(new RightHandSwing1(stateManager));
         }
     }

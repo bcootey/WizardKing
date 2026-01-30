@@ -43,4 +43,23 @@ public class RightHandStateManager : MonoBehaviour
     {
         attackDamage.damage = damage;
     }
+
+    public void UpdateToSwing1Damage()
+    {
+        currentAttackDamage = playerStats.baseDamage * 1f;
+        currentAttackDamageNormalized = Mathf.RoundToInt(currentAttackDamage);
+        UpdateAttackDamage(currentAttackDamageNormalized);
+    }
+    public void UpdateToSwing2Damage()
+    {
+        currentAttackDamage = playerStats.baseDamage * 1.2f;
+        currentAttackDamageNormalized = Mathf.RoundToInt(currentAttackDamage);
+        UpdateAttackDamage(currentAttackDamageNormalized);
+    }
+    public void UpdateToSwing3Damage()
+    {
+        currentAttackDamage = playerStats.baseDamage * 1.5f;
+        currentAttackDamageNormalized = Mathf.RoundToInt(currentAttackDamage);
+        UpdateAttackDamage(currentAttackDamageNormalized);
+    }
 }
