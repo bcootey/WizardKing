@@ -12,16 +12,13 @@ public class DashGhost3D : MonoBehaviour
 
     void Awake()
     {
-        // Grab all renderers and make unique material instances
         foreach (var rend in GetComponentsInChildren<Renderer>())
         {
             if (rend == null) continue;
-
-            // .material gives an instance so we don't modify sharedMaterial
+            
             var mat = rend.material;
             if (mat != null)
             {
-                // Set initial alpha
                 if (mat.HasProperty("_Color"))
                 {
                     var c = mat.color;

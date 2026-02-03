@@ -10,7 +10,17 @@ public class ShopItem : MonoBehaviour, IInteractable
 
     public GameObject coinPrefab;
     public Transform slamPosition;
-    public string GetPrompt() => "Buy";
+    private SpellMenu spellMenu;
+    private string interactText = "Buy";
+    void Start()
+    {
+        spellMenu = FindObjectOfType<SpellMenu>(true);
+    }
+
+    public string GetPrompt()
+    {
+        return interactText;
+    }
 
     public void Interact()
     {
@@ -27,6 +37,9 @@ public class ShopItem : MonoBehaviour, IInteractable
             coinPrefab.SetActive(true);
             purchased = true;
             Coins.instance.DecreaseCoins(currentSpellInShop.cost);
+            spellMenu.AddSpellToInventory(currentSpellInShop);
+            Debug.Log("Bought " + currentSpellInShop.name);
+            interactText = "No Longer Available"; //changes interact text to blank so it doesnt appear
         }
         
     }
@@ -39,4 +52,5 @@ public class ShopItem : MonoBehaviour, IInteractable
         }
         return false;
     }
+
 }

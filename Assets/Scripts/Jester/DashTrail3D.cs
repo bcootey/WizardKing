@@ -12,7 +12,7 @@ public class DashTrail3D : MonoBehaviour
     public float ghostStartAlpha = 0.7f;
 
     [Header("Manual Fix")]
-    public float ghostScaleMultiplier = 1f;   // ← adjust this until ghost matches
+    public float ghostScaleMultiplier = 1f;   // adjust this until ghost matches
 
     private bool isDashing;
     private float ghostTimer;
@@ -38,22 +38,18 @@ public class DashTrail3D : MonoBehaviour
         {
             if (smr == null) continue;
 
-            // Bake mesh in local space
+            //bake mesh in local space
             Mesh baked = new Mesh();
             smr.BakeMesh(baked);
-
-            // Create ghost mesh object
+            
             GameObject child = new GameObject(smr.name + "_Ghost");
             child.transform.SetParent(root.transform);
-
-            // Match position & rotation
+            
             child.transform.position = smr.transform.position;
             child.transform.rotation = smr.transform.rotation;
-
-            // Manual size fix — YOU control the ghost size here 🌟
+            
             child.transform.localScale = smr.transform.lossyScale * ghostScaleMultiplier;
-
-            // Mesh components
+            
             var mf = child.AddComponent<MeshFilter>();
             mf.mesh = baked;
 

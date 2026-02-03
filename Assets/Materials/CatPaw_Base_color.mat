@@ -15,6 +15,7 @@ Material:
   - DIFF_VERTEX
   - OPAQUE
   - SPEC_GOURAUD
+  - UNLIT
   - _EMISSION
   m_InvalidKeywords:
   - _DIFFMODEL_VERTEX
@@ -26,7 +27,8 @@ Material:
   m_CustomRenderQueue: 2000
   stringTagMap:
     RenderType: Opaque
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - FORWARDADD
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -79,7 +81,7 @@ Material:
     - _SpecModel: 0
     - _Specular: 0
     - _SrcBlend: 1
-    - _Unlit: 0
+    - _Unlit: 1
     - _VertexInaccuracy: -1
     - _ZWrite: 1
     m_Colors:
