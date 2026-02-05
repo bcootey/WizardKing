@@ -3,33 +3,58 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 public class Teleporting : MonoBehaviour
 {
-    private Transform playerTransform;
+    [Header("Refs")]
     public SavingMenu savingMenu;
+
+    [Header("Player")]
+    [SerializeField] GameObject playerPrefab;
+    [SerializeField] string playerTag = "Player";
     public void StartTeleport(SpawnPointData data)
     {
         StartCoroutine(TeleportRoutine(data));
     }
     private IEnumerator TeleportRoutine(SpawnPointData data)
     {
-        GameStateManager.instance.AddLoadingLock();
-        savingMenu.ClosePopUpMenu();
-        savingMenu.LeaveSaveMenu();
-        playerTransform = PlayerStats.instance.transform;
-        
-        ScreenTransition.instance.StartFade(.75f, 1.5f);
+        if (GameStateManager.instance != null)
+            GameStateManager.instance.AddLoadingLock();
+
+        if (savingMenu != null)
+        {
+            savingMenu.ClosePopUpMenu();
+            savingMenu.LeaveSaveMenu();
+        }
+
+        if (ScreenTransition.instance != null)
+            ScreenTransition.instance.StartFade(0.75f, 1.5f);
+
         yield return new WaitForSeconds(1f);
-        // if target scene is different, load it
+
+        // 1) Load scene if needed
         if (SceneManager.GetActiveScene().name != data.sceneName)
         {
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(data.sceneName);
-            while (!asyncLoad.isDone)
+            AsyncOperation load = SceneManager.LoadSceneAsync(data.sceneName);
+            while (!load.isDone)
                 yield return null;
+
+            yield return null;
         }
+        
+        GameObject player = GameObject.FindGameObjectWithTag(playerTag);
+
+        if (player == null)
+        {
+            player = Instantiate(playerPrefab);
+            yield return null;
+        }
+        
+        player.transform.position = data.position;
+        
         CameraFix();
-        playerTransform.position = data.position;
 
         Debug.Log($"Teleported player to {data.id} in scene {data.sceneName}");
-        GameStateManager.instance.RemoveLoadingLock();
+
+        if (GameStateManager.instance != null)
+            GameStateManager.instance.RemoveLoadingLock();
     }
 
     private void CameraFix()

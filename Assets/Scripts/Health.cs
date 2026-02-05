@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     public PlayerDash playerDash;
     public float defaultInvincibilityFrames;
     public bool canBeHit = true;
+    private bool isDead = false;
     [Header("Effects")]
     public ParticleSystem hitEffect;
     public ParticleSystem gainHealthEffect;
@@ -24,7 +25,6 @@ public class Health : MonoBehaviour
         }
 
         instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     public void OnPlayerHit(float damage, float invincibilityFrames)
@@ -85,10 +85,17 @@ public class Health : MonoBehaviour
 
     private void CheckIfDead()
     {
+        if (isDead) return;
+        
         if (PlayerStats.instance.currentHealth <= 0)
         {
-            //death logic
-            Destroy(gameObject);
+            isDead = true;
+            canBeHit = false;
+            
+            if (RespawnManager.instance != null)
+                RespawnManager.instance.RespawnAtLastCheckpoint();
+            else
+                Debug.LogError("RespawnManager is missing in the scene!");
         }
     }
     private void PlayHitEffects()

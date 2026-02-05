@@ -20,7 +20,7 @@ public class Coins : MonoBehaviour
         }
 
         instance = this;
-        DontDestroyOnLoad(gameObject);
+        
     }
 
     public void IncreaseCoins(int amount)

@@ -5069,6 +5069,95 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1001 &89312121
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 412511270405938832, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412511270405938832, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673058909649219407, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: cfuStatus
+      value: PSXEffects v1.18.4 - version ahead?!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673058909649219407, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: customRes.x
+      value: 273
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673058909649219407, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: customRes.y
+      value: 154
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 27.849174
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 17.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 59.30063
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887397436586949125, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_Name
+      value: Pyromancer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569773244615241963, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: cfuStatus
+      value: PSXEffects v1.18.4 - version ahead?!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569773244615241963, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: customRes.x
+      value: 273
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569773244615241963, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: customRes.y
+      value: 154
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
 --- !u!1001 &117537098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17050,3 +17139,4 @@ SceneRoots:
   - {fileID: 1094179460}
   - {fileID: 543450652300943527}
   - {fileID: 1665952301}
+  - {fileID: 89312121}

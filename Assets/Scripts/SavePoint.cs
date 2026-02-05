@@ -10,28 +10,33 @@ public class SavePoint : MonoBehaviour, IInteractable
     public bool isUnlocked = false;
     public Transform teleportTransform;
     
-    private SavingMenu savingMenu;
-    private PlayerInteractor playerInteractor;
+    public SavingMenu savingMenu;
+    public PlayerInteractor playerInteractor;
 
     void Awake()
     {
         sceneName = this.gameObject.scene.name;
     }
-    void Start()
-    {
-        savingMenu = GameObject.Find("SavingMenu").GetComponent<SavingMenu>();
-        playerInteractor = GameObject.Find("Pyromancer").GetComponent<PlayerInteractor>();
-        
-        //ask the manager if this one was already unlocked (from a previous scene)
-        if (SpawnPointManager.instance != null)
-        {
-            isUnlocked = SpawnPointManager.instance.IsUnlocked(locationName);
-        }
-    }
     public string GetPrompt() => "Rest";
 
     public void Interact()
     {
+        if (savingMenu == null)
+            savingMenu = FindFirstObjectByType<SavingMenu>();
+
+        if (playerInteractor == null)
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+                playerInteractor = player.GetComponent<PlayerInteractor>();
+        }
+
+        if (savingMenu == null || playerInteractor == null)
+        {
+            Debug.LogError("SavePoint missing references (SavingMenu or PlayerInteractor).");
+            return;
+        }
+        
         playerInteractor.PauseRayForSeconds(1f);
         
         if (!isUnlocked)
@@ -39,6 +44,7 @@ public class SavePoint : MonoBehaviour, IInteractable
             Unlock();
         }
         
+        SpawnPointManager.instance.SetCurrentCheckpoint(locationName);
         savingMenu.EnterSavingMenu(locationName);
         RegainHealthAndMana();
         

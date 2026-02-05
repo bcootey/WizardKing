@@ -72,6 +72,12 @@ public class GameStateManager : MonoBehaviour
             OnStateChanged?.Invoke(State);
         }
     }
+    public void ClearAllLocks()
+    {
+        pauseLocks = 0;
+        loadingLocks = 0;
+        RecomputeState();
+    }
 
     private void ApplySideEffects(GameState state)
     {

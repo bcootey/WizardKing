@@ -24559,6 +24559,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadingDoor
   sceneName: TowerOfThornsOutside
   newPos: {x: 24.777985, y: 16.413, z: 59.793144}
+  playerPrefab: {fileID: 0}
+  playerTag: Player
 --- !u!1001 &626165827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26702,6 +26704,95 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb1ecab4a545de94a8fc1087d26ad7c2, type: 3}
+--- !u!1001 &956145878
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 412511270405938832, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412511270405938832, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673058909649219407, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: cfuStatus
+      value: PSXEffects v1.18.4 - version ahead?!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673058909649219407, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: customRes.x
+      value: 273
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673058909649219407, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: customRes.y
+      value: 154
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 37.45638
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 41.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.740336
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887397436586949125, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_Name
+      value: Pyromancer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569773244615241963, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: cfuStatus
+      value: PSXEffects v1.18.4 - version ahead?!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569773244615241963, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: customRes.x
+      value: 273
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569773244615241963, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: customRes.y
+      value: 154
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
 --- !u!1001 &956173242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46226,3 +46317,4 @@ SceneRoots:
   - {fileID: 1298050213}
   - {fileID: 1153235303615983592}
   - {fileID: 2091072712}
+  - {fileID: 956145878}
