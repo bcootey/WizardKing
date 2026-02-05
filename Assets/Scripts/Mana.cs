@@ -21,7 +21,6 @@ public class Mana : MonoBehaviour
         }
 
         instance = this;
-        DontDestroyOnLoad(gameObject);
     }
     public bool CanUseSpell(Spell spell)
     {

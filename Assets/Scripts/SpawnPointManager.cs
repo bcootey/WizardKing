@@ -11,6 +11,19 @@ public class SpawnPointManager : MonoBehaviour
 
     public delegate void OnSpawnPointUnlocked(string id);
     public event OnSpawnPointUnlocked SpawnPointUnlocked;
+    
+    public string currentCheckpointId { get; private set; }
+    
+    public void SetCurrentCheckpoint(string id)
+    {
+        currentCheckpointId = id;
+    }
+
+    public SpawnPointData GetCurrentCheckpointData()
+    {
+        if (string.IsNullOrEmpty(currentCheckpointId)) return null;
+        return GetSpawnPointData(currentCheckpointId);
+    }
 
     private void Awake()
     {
@@ -52,7 +65,7 @@ public class SpawnPointManager : MonoBehaviour
 
         Debug.Log($"Unlocked spawn point: {savePoint.locationName} in scene {savePoint.sceneName}");
 
-        // Notify listeners (like TravelMenu)
+        // Notify listeners
         SpawnPointUnlocked?.Invoke(savePoint.locationName);
     }
     

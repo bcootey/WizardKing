@@ -35,7 +35,6 @@ public class PlayerStats : MonoBehaviour
         }
 
         instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     public void UpdateHud()

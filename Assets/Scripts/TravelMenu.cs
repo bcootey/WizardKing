@@ -2,12 +2,11 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
-using System.Collections;
 
 public class TravelMenu : MonoBehaviour
 {
+    public SavingMenu savingMenu;
     public static TravelMenu instance;
-    public Teleporting teleporting;
 
     [Header("UI Setup")]
     [SerializeField] private Transform spawnPointListParent; // object with grid layout to organize buttons
@@ -79,15 +78,20 @@ public class TravelMenu : MonoBehaviour
     {
         Debug.Log($"Teleporting to {spawnPointName}");
 
-        //use the SpawnPointData from the manager
+        if (SpawnPointManager.instance == null)
+            return;
+        
+        
         var data = SpawnPointManager.instance.GetSpawnPointData(spawnPointName);
 
-        if (data == null)
+        if (TravelManager.instance == null)
         {
-            Debug.LogWarning($"No spawn point data found for {spawnPointName}");
+            Debug.LogError("TravelManager is missing.");
             return;
         }
-        
-        teleporting.StartTeleport(data);
+        savingMenu.ClosePopUpMenu();
+        savingMenu.LeaveSaveMenu();
+
+        TravelManager.instance.TravelTo(data.sceneName, data.position);
     }
 }

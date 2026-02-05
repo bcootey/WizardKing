@@ -16,7 +16,7 @@ public class HitStop : MonoBehaviour
         }
 
         instance = this;
-        DontDestroyOnLoad(gameObject);
+        
     }
 
     public void Stop(float duration)
