@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class JesterBaseState : MonoBehaviour
+public abstract class JesterBaseState
 {
     protected JesterStateManager stateManager;
     public JesterBaseState(JesterStateManager stateManager)

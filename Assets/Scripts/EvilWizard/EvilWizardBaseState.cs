@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class EvilWizardBaseState : MonoBehaviour
+public abstract class EvilWizardBaseState
 {
     protected EvilWizardStateManager stateManager;
     public EvilWizardBaseState(EvilWizardStateManager stateManager)

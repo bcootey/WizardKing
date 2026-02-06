@@ -60,7 +60,7 @@ public class LeftHandUltimateState : LeftHandBaseState
     {
         stateManager.ultimateChargeBar.gameObject.SetActive(false);
         stateManager.ultimateChargeBar.value = 0;
-        Destroy(stateManager.reticleInstance);
+        Object.Destroy(stateManager.reticleInstance);
         stateManager.casting = false;
         //stateManager.FPScontroller.canMove = true;
         //stateManager.FPScontroller.gravity = 10;

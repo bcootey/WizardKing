@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class LeftHandBaseState : MonoBehaviour
+public abstract class LeftHandBaseState
 {
     protected LeftHandStateManager stateManager;
     public LeftHandBaseState(LeftHandStateManager stateManager)

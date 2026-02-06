@@ -14,7 +14,7 @@ public class EnemyHealthShieldState : EnemyHealthBaseState
         if (stateManager.shieldHealth <= 0)
         {
             stateManager.shieldObject.SetActive(false);
-            Instantiate(stateManager.shieldBreakParticles, stateManager.goreSpawnPoint.position, stateManager.goreSpawnPoint.rotation);
+            Object.Instantiate(stateManager.shieldBreakParticles, stateManager.goreSpawnPoint.position, stateManager.goreSpawnPoint.rotation);
             stateManager.SetNextState(new EnemyHealthNeutralState(stateManager));
         }
     }
