@@ -42,7 +42,7 @@ public class LeftHandCastingState : LeftHandBaseState
     }
     public override void ExitState()
     {
-        Destroy(stateManager.reticleInstance);
+        Object.Destroy(stateManager.reticleInstance);
         stateManager.casting = false;
     }
 }

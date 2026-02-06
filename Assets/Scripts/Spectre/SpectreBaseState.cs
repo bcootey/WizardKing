@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class SpectreBaseState : MonoBehaviour
+public abstract class SpectreBaseState
 {
     protected SpectreStateManager stateManager;
     public SpectreBaseState(SpectreStateManager stateManager)
