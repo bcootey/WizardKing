@@ -24559,8 +24559,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadingDoor
   sceneName: TowerOfThornsOutside
   newPos: {x: 24.777985, y: 16.413, z: 59.793144}
-  playerPrefab: {fileID: 0}
-  playerTag: Player
 --- !u!1001 &626165827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26720,6 +26718,62 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 538380651070629576, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 538380651070629576, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 538380651070629576, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 538380651070629576, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 538380651070629576, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 538380651070629576, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689940982697286313, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 667af88ead8db2f4fb3e662c9490d691, type: 2}
+    - target: {fileID: 2460544773092221701, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 667af88ead8db2f4fb3e662c9490d691, type: 2}
+    - target: {fileID: 4069231021598779619, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069231021598779619, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069231021598779619, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069231021598779619, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069231021598779619, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069231021598779619, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4673058909649219407, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
       propertyPath: cfuStatus
       value: PSXEffects v1.18.4 - version ahead?!
@@ -26787,6 +26841,30 @@ PrefabInstance:
     - target: {fileID: 8569773244615241963, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
       propertyPath: customRes.y
       value: 154
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094466568970307110, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094466568970307110, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094466568970307110, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094466568970307110, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094466568970307110, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094466568970307110, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
