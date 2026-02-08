@@ -5433,7 +5433,8 @@ MonoBehaviour:
   enemies:
   - {fileID: 1300278467503034211, guid: a464b7b14a261ba46bea00872bff07b7, type: 3}
   - {fileID: 3118557650093305503, guid: c69378402fdfc97439d5edf56c781eea, type: 3}
-  howOftenEnemiesSpawn: 15
+  - {fileID: 2935243256902335416, guid: 0a671f8b5ffe9dd40874f777093c805b, type: 3}
+  howOftenEnemiesSpawn: 12
   spawnPoints:
   - {fileID: 1962635598}
   - {fileID: 761654184}
@@ -16093,7 +16094,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2825556729567204038, guid: 0a671f8b5ffe9dd40874f777093c805b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.37
+      value: 4.56
       objectReference: {fileID: 0}
     - target: {fileID: 2825556729567204038, guid: 0a671f8b5ffe9dd40874f777093c805b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16101,7 +16102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2825556729567204038, guid: 0a671f8b5ffe9dd40874f777093c805b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 72.75
+      value: 58.85
       objectReference: {fileID: 0}
     - target: {fileID: 2825556729567204038, guid: 0a671f8b5ffe9dd40874f777093c805b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16861,7 +16862,7 @@ PrefabInstance:
     - target: {fileID: 2460544773092221701, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 667af88ead8db2f4fb3e662c9490d691, type: 2}
+      objectReference: {fileID: 2100000, guid: ce2b726a3f761ab4f936cb11e7786cfd, type: 2}
     - target: {fileID: 4069231021598779619, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -16888,15 +16889,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.29
+      value: -41.98
       objectReference: {fileID: 0}
     - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.45
+      value: 3.79
       objectReference: {fileID: 0}
     - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 36.56
+      value: 73.37
       objectReference: {fileID: 0}
     - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
       propertyPath: m_LocalRotation.w
