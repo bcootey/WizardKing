@@ -18,8 +18,9 @@ MonoBehaviour:
   speed: 14
   spellType: 0
   spawnPoint: 0
-  spellReticle: {fileID: 0}
+  spellReticle: {fileID: 7752138907858696112, guid: 09240d67b38d7c642afd4482d97e4166, type: 3}
   spellInstance: {fileID: 4137341901546142164, guid: fa4db0d454c4f7649ac10e1271783bce, type: 3}
   chargingTime: 0
   icon: {fileID: -364536439, guid: 6aedfc127d504084ea7fedb3e82b0b3e, type: 3}
   description: Throws a powerful ball of fire that explodes in a radius on impact
+  cost: 0

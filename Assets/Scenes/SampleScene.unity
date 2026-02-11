@@ -16740,7 +16740,7 @@ MonoBehaviour:
   primaryAttackCooldown: 2
   primaryAttackCooldownTimer: 0
   firstPrimaryAttackDone: 0
-  flourishCooldown: 1
+  flourishCooldown: 4
   flourishCooldownTimer: 0
   startedGlaiveSpinAttack: 0
   followPlayer: 0
@@ -41797,15 +41797,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41.98
+      value: -41.6
       objectReference: {fileID: 0}
     - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.79
+      value: 6.7
       objectReference: {fileID: 0}
     - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 73.37
+      value: 70.83
       objectReference: {fileID: 0}
     - target: {fileID: 5433394027642729153, guid: d0b77a91186ff8b45a266004506859d7, type: 3}
       propertyPath: m_LocalRotation.w

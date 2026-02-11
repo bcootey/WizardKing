@@ -18,8 +18,9 @@ MonoBehaviour:
   speed: 9
   spellType: 0
   spawnPoint: 0
-  spellReticle: {fileID: 0}
+  spellReticle: {fileID: 7752138907858696112, guid: 09240d67b38d7c642afd4482d97e4166, type: 3}
   spellInstance: {fileID: 4137341901546142164, guid: d261e3126149cfd4c8c798c51f99632a, type: 3}
   chargingTime: 0
   icon: {fileID: 953356095, guid: a152616ecafddf14894b4a7a61b37cd3, type: 3}
   description: Hurl an orb of fire that detonates sending shards of fire forward
+  cost: 0
