@@ -17,6 +17,10 @@ public class DragonKnightFollowState : DragonKnightBaseState
         {
             stateManager.SetNextState(new DragonKnightCombatState(stateManager));
         }
+        if (stateManager.playerDistanceDetector.WasExited())
+        {
+            stateManager.SetNextState(new DragonKnightIdleState(stateManager));
+        }
     }
     public override void ExitState()
     {

@@ -22,6 +22,11 @@ public class DragonKnightPrimaryAttackState : DragonKnightBaseState
     }
     public override void UpdateState()
     {
+        if (stateManager.IsParried)
+        {
+            stateManager.SetNextState(new DragonKnightStaggerState(stateManager));
+        }
+        
         if (stateManager.firstPrimaryAttackDone == false)
         {
             stateManager.knightAgent.SetDestination(stateManager.playerStats.playerLocation.position);

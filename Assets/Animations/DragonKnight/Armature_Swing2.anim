@@ -15271,14 +15271,21 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: ChangeSpeed
+    functionName: SetObjectLookTrue
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0
-    functionName: SetObjectLookTrue
+    functionName: ChangeSpeed
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.33333334
+    functionName: Flash
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -15292,6 +15299,13 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.6666667
+    functionName: ChangeSpeed
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 79
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.6666667
     functionName: StartDashTrail
     data: 
     objectReferenceParameter: {fileID: 0}
@@ -15299,17 +15313,24 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.6666667
-    functionName: ChangeSpeed
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 70
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.6666667
     functionName: ChangeAcceleration
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 90
+    floatParameter: 95
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.75
+    functionName: DashEffectPlay
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.7916667
+    functionName: SpearSpiralEffectPlay
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.875

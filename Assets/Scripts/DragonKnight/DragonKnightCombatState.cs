@@ -9,15 +9,36 @@ public class DragonKnightCombatState : DragonKnightBaseState
     }
     public override void UpdateState()
     {
+        //cooldowns timers
         stateManager.primaryAttackCooldownTimer += Time.deltaTime;
+        stateManager.flourishCooldownTimer += Time.deltaTime;
         stateManager.knightAgent.SetDestination(stateManager.playerStats.playerLocation.position);
+        //randomly generates a move and checks if its off cooldown
         if (stateManager.playerMeleeDetector.WasEntered())
         {
-            if (stateManager.primaryAttackCooldownTimer >= stateManager.primaryAttackCooldown)
+            int rand = Random.Range(0, 2);
+            if (rand == 0)
             {
-                stateManager.primaryAttackCooldownTimer = 0;
-                stateManager.SetNextState(new DragonKnightPrimaryAttackState(stateManager));
+                if (stateManager.primaryAttackCooldownTimer >= stateManager.primaryAttackCooldown)
+                {
+                    stateManager.primaryAttackCooldownTimer = 0;
+                    stateManager.SetNextState(new DragonKnightPrimaryAttackState(stateManager));
+                }
             }
+
+            if (rand == 1)
+            {
+                if (stateManager.flourishCooldownTimer >= stateManager.flourishCooldown)
+                {
+                    stateManager.flourishCooldownTimer = 0;
+                    stateManager.SetNextState(new DragonKnightFlourish(stateManager));
+                }
+            }
+        }
+
+        if (stateManager.playerMeleeDetector.WasExited())
+        {
+            stateManager.SetNextState(new DragonKnightFollowState(stateManager));
         }
     }
     public override void ExitState()
