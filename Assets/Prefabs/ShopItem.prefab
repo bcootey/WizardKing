@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6413046780878752775}
   - component: {fileID: 481205368280845371}
   - component: {fileID: 431807998328438298}
-  - component: {fileID: 5000040248154423134}
+  - component: {fileID: 3026030994651123204}
   m_Layer: 6
   m_Name: ShopBase
   m_TagString: Untagged
@@ -90,7 +90,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5000040248154423134
+--- !u!65 &3026030994651123204
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,8 +109,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.02, y: 0.019999994, z: 0.009669847}
-  m_Center: {x: -4.587513e-18, y: 3.9867727e-11, z: 0.00516508}
+  m_Size: {x: 0.019999998, y: 0.019999998, z: 0.009669844}
+  m_Center: {x: 0.00000005960841, y: 1.6917433e-11, z: 0.005165081}
 --- !u!1 &3482855173562095469
 GameObject:
   m_ObjectHideFlags: 0

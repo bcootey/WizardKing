@@ -18,8 +18,9 @@ MonoBehaviour:
   speed: 0
   spellType: 0
   spawnPoint: 0
-  spellReticle: {fileID: 0}
+  spellReticle: {fileID: 7752138907858696112, guid: 09240d67b38d7c642afd4482d97e4166, type: 3}
   spellInstance: {fileID: 5741936400995382116, guid: 39cc6b48bbc8536408a9be7d638d17a9, type: 3}
   chargingTime: 0
   icon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   description: Hurl a flaming axe that returns to you after a short delay
+  cost: 0

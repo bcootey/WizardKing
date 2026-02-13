@@ -22,7 +22,7 @@ public class VariableAnimSpeed : MonoBehaviour
             active = false;
     }
 
-    // Called by animation event
+    //called by animation event
     public void StartSpeedCurve()
     {
         var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
