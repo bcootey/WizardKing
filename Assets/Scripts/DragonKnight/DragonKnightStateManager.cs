@@ -33,6 +33,10 @@ public class DragonKnightStateManager : MonoBehaviour, IParryable
     public ParticleSystem dashEffect;
     public ParticleSystem slashEffect;
     public ParticleSystem spinEffect;
+    public ParticleSystem slamEffect;
+    public ParticleSystem glaiveSpinEffect;
+    public ParticleSystem frontFlipEffect;
+    public ParticleSystem slamEffect2;
     
     [Header("Parry")] 
     public bool isParryable;
@@ -171,5 +175,25 @@ public class DragonKnightStateManager : MonoBehaviour, IParryable
     public void ResetTrail()
     {
         knightAgent.ResetPath();
+    }
+
+    public void PlaySlamEffect()
+    {
+        slamEffect.Play();
+    }
+
+    public void GlaiveSpinEffectPlay()
+    {
+        glaiveSpinEffect.Play();
+    }
+
+    public void FrontFlipEffect()
+    {
+        frontFlipEffect.Play();
+    }
+
+    public void PlaySlamEffect2()
+    {
+        slamEffect2.Play();
     }
 }

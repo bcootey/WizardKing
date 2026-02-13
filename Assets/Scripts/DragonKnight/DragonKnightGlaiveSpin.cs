@@ -9,7 +9,10 @@ public class DragonKnightGlaiveSpin : DragonKnightBaseState
     }
     public override void UpdateState()
     {
-
+        if (stateManager.IsParried)
+        {
+            stateManager.SetNextState(new DragonKnightStaggerState(stateManager));
+        }
     }
     public override void ExitState()
     {
